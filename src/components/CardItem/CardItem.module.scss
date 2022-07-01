@@ -1,0 +1,68 @@
+@import "../../styles/vars";
+
+.card_item {
+	border: 3px solid $mainText;
+	padding: 10px;
+	color: $mainText;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+.card_item__img {
+	position: relative;
+	top: -10px;
+	left: -10px;
+	width: calc(100% + 20px);
+	overflow: hidden;
+	padding-top: 100%;
+	margin-bottom: 20px;
+	z-index: 1;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+.card_item__name {
+	text-align: center;
+	font-size: 24px;
+	color: $mainText;
+	margin-bottom: auto;
+	flex: 0 1 auto;
+	height: 58px;
+	overflow: hidden;
+}
+.card_item__bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: 15px;
+	height: 75px;
+}
+.card_item__price_list {
+	font-size: 22px;
+}
+.card_item__price {
+	font-size: 28px;
+}
+.card_item__old_price {
+	color: $secondText;
+	text-decoration: line-through;
+}
+.card_item__to_cart {
+	background: transparent;
+	cursor: pointer;
+}
+.card_item__sale {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	background: $hoverMainText;
+	color: $bannerText;
+	font-size: 24px;
+	padding: 15px 25px;
+	z-index: 2;
+}

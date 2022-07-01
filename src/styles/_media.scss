@@ -1,0 +1,127 @@
+//1 $mw + 12
+@media (max-width: $md1) {
+	.container {
+		max-width: 1140px;
+	}
+}
+//2 1199
+@media (max-width: $md2) {
+	.container {
+		max-width: 960px;
+	}
+}
+//3 991
+@media (max-width: $md3) {
+	.container {
+		max-width: 720px;
+	}
+}
+//4 768
+@media (max-width: $md4) {
+	.container {
+		max-width: 540px;
+	}
+	.header {
+		&__menu {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			right: -100%;
+			z-index: 999;
+			transition: 0.3s;
+
+			background: $secondBackgroundColor;
+			max-width: 500px;
+			width: 100%;
+			padding: 30px 25px 45px;
+		}
+		&__menu.active {
+			right: 0;
+			margin-left: 0;
+			box-shadow: 0 0 5px 1px $secondBackgroundColor;
+			overflow-x: hidden;
+		}
+		&__close {
+			display: block;
+		}
+		&__list {
+			flex-direction: column;
+			li {
+				margin-bottom: 10px;
+			}
+			li:last-child {
+				margin: 0 auto;
+			}
+		}
+		&__link {
+			font-size: 24px;
+		}
+		&__burger {
+			display: block;
+		}
+	}
+	.footer {
+		&__top_column {
+			flex: 1 1 100%;
+		}
+		&__bottom {
+			flex-direction: column;
+		}
+		&__rights {
+			margin-bottom: 15px;
+		}
+	}
+	.section_sales {
+		&__list {
+			flex-wrap: wrap;
+		}
+		&__list_item {
+			flex: 0 1 100%;
+		}
+	}
+	.clothes_list {
+		&__list {
+			flex-wrap: wrap;
+		}
+		&__list_item {
+			flex: 0 1 100%;
+		}
+	}
+	.product_page {
+		&__top {
+			flex-direction: column;
+		}
+		&__image {
+			margin: 0 0 30px 0;
+		}
+		&__btn {
+			left: 0;
+			transform: translateX(0);
+		}
+	}
+}
+//5 576
+@media (max-width: $md5) {
+	.container {
+		max-width: 100%;
+		padding: 0 15px;
+	}
+	.pagination {
+		&__link {
+			font-size: 14px;
+			&--pag_prev {
+				padding: 5px 10px;
+			}
+			&--pag_next {
+				padding: 5px 10px;
+			}
+			&--pag_active {
+				padding: 5px 10px;
+			}
+		}
+	}
+	.slick-prev, .slick-next {
+		top: auto;
+		bottom: 15px;
+	}
+}
